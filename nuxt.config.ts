@@ -21,6 +21,10 @@ export default defineNuxtConfig({
       '~/assets/css/index.css',
 
     ],
+    // image: {
+      
+    //     domains: ['res.cloudinary.com']
+    // },
 
     app:{
       head:{

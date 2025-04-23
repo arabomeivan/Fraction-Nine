@@ -1,11 +1,11 @@
 <template>
     <div>
-        fjfkj
+        fhjf
     </div>
 </template>
 <script>
 export default {
-    name:'AppFooter'
+    name:'Brands'
 }
 </script>
 <style lang="">

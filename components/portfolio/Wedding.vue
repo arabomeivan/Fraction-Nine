@@ -1,11 +1,11 @@
-<template>
+<template lang="">
     <div>
-        fjfkj
+        Wedding
     </div>
 </template>
 <script>
 export default {
-    name:'AppFooter'
+    name:'Wedding'
 }
 </script>
 <style lang="">
