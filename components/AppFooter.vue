@@ -9,10 +9,10 @@
                                      </h1>
                         
                                      <div>
-                                        <h1 class="text-white">LET'S DISCUSS YOUR</h1>
+                                        <h1 class="text-white">LET'S DISCUSS YOUR <span class="d-lg-none d-block">VISION</span></h1>
                                      </div>
                                      <div class="d-flex gap-3">
-                                        <h1 class="text-white">VISION</h1>
+                                        <h1 class="text-white d-lg-block d-none">VISION</h1>
                                         <div class="d-flex justify-content-lg-start" style="width:max-content">
                                             <button class=" p-0 bg-transparent border-0">
                                                <span class="btn bg-black border border-white  rounded-5 text-white">

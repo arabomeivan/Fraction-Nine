@@ -10,12 +10,19 @@ body
 {
     color: #515151;
 }
+.number-badge {
+  aspect-ratio: 1 / 1;
+  min-width: 0;             
+  line-height: 1;           
+}
+
 button:hover span
 {
    background-color: #e4572e !important ;
    border: none !important;
    color: white !important;
 }
+
 .tab-wrapper::-webkit-scrollbar
 {
   display: none;
@@ -55,8 +62,14 @@ a{
   .image-container {
     transition: transform 0.3s ease;
   }
-  .btn:focus{
-    box-shadow: none;
+  .btn:focus, .accordion-button:focus{
+    box-shadow: none !important;
+
+  }
+  .accordion-button:focus, .accordion-button:not(.collapsed)
+  {
+    background-color: transparent!important;
+    color: #131313;
   }
   .image {
     width: 100%;

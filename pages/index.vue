@@ -26,7 +26,7 @@
                     <img src="/assets/images/gallery-2.png" class="img-fluid mb-3 animate__animated animate__zoomIn" alt="">
                 </div>
                 
-                <div>
+                <div class="d-flex align-items-end justify-content-center">
                     <img src="/assets/images/gallery-3.png" class="img-fluid mb-3 animate__animated animate__zoomIn" alt="">
                 </div>
                 
@@ -88,12 +88,12 @@
     I BLEND EMOTION AND ARTISTRY TO TURN YOUR MOMENTS INTO MAGIC
    </h1>
 
-   <div class="d-block d-lg-flex justify-content-between mt-3">
-<div class="">
-<Services/>
+   <div class="row mt-3">
+<div class="col-lg-6">
+<ServicesSection/>
 </div>
 
-<div class="d-flex align-items-center justify-content-center justify-content-lg-end">
+<div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-end">
     <img src="https://res.cloudinary.com/djtwgg6op/image/upload/v1745491704/pexels-anya-juarez-tenorio-227888521-31651281_1_e7vhqy.png" class="img-fluid" alt="">
 </div>
    </div>
@@ -104,7 +104,7 @@
      <h1 class="text-black">HEAR FROM OUR HAPPY CLIENTS</h1>
 
      <div>
-        <TestiMonials/>
+       <TestiMonials/>
      </div>
 
     </section>
@@ -116,12 +116,12 @@ import LandScapes from '~/components/portfolio/LandScapes.vue'
 import LifeStyle from '~/components/portfolio/LifeStyle.vue'
 import Portraits from '~/components/portfolio/Portraits.vue'
 import Wedding from '~/components/portfolio/Wedding.vue'
-import TestiMonials from '~/components/TestiMonials.vue'
-import Services from '~/components/Services.vue'
+import TestiMonials from '../components/TestiMonials.vue'
+import ServicesSection from '../components/ServicesSection.vue'
 export default {
     name:'HomePage',
     components:{
-        TestiMonials, Services
+        TestiMonials, ServicesSection
     },
     data(){
         return{
