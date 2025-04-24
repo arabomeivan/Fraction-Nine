@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg bg-white fixed-top py-4">
+        <nav :class="pageScrolledY ? 'navbar navbar-expand-lg bg-light fixed-top py-4':'navbar navbar-expand-lg bg-white fixed-top py-4'">
             <div class="container">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"/>
@@ -19,8 +19,8 @@
                   </li>
                 </ul>
                 <div class="d-flex justify-content-center">
-                    <button class=" btn bg-white border-0 text-black">
-                       <span class="btn bg-white  rounded-5 border-black border">
+                    <button class=" btn bg-transparent border-0 text-black">
+                       <span class="btn bg-transparent  rounded-5 border-black border">
                         Book a call
                        </span>
                         <span class="btn border-black border rounded-circle text-black">
@@ -37,6 +37,36 @@
 <script>
 export default {
   name:'NavBar',
+  data()
+  {
+    return{
+      pageScrolledVertically: false
+    }
+  },
+
+  computed:
+  {
+    pageScrolledY()
+       {
+        return this.pageScrolledVertically
+       }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+    methods:{
+      handleScroll() {
+        if (window.scrollY > 0) {
+          this.pageScrolledVertically = true
+        } else {
+          this.pageScrolledVertically = false
+        }
+      }
+    }
     
 }
 </script>
