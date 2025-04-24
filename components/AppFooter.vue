@@ -97,7 +97,7 @@
        <CloseButton dismiss="modal" />
       </ModalHeader>
       <ModalBody>
-            <form class="text-justify w-100 align-self-center" @submit.prevent="">
+            <form class="text-justify w-100 align-self-center" @submit.prevent="contactUs">
                 <div>
                     <div class="mb-4" style="text-align:justify;">
                         <label for="exampleFormControlInput1" class="form-label text-secondary">First Name<span class="text-danger">*</span></label>
