@@ -31,8 +31,35 @@ export default {
     },
 
     mounted() {
+        
+        // wait one tick so child page has rendered
+    this.$nextTick(() => {
+      this.waitForCriticalImages().then(() => {
         this.appMounted = true;
+      });
+    });
     },
+    methods: {
+    waitForCriticalImages() {
+      const imgs = Array.from(
+        // look for ALL images marked as critical, no matter which page
+        this.$el.querySelectorAll('.preload-img')
+      );
+
+      if (!imgs.length) return Promise.resolve();
+
+      const promises = imgs.map(img =>
+        img.complete && img.naturalWidth
+          ? Promise.resolve()
+          : new Promise(resolve => {
+              img.addEventListener('load', resolve, { once: true });
+              img.addEventListener('error', resolve, { once: true });
+            })
+      );
+
+      return Promise.all(promises);
+    }
+  }
  
 }
 </script>

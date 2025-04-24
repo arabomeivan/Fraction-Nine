@@ -21,6 +21,7 @@ button:hover span
    background-color: #e4572e !important ;
    border: none !important;
    color: white !important;
+   transition: all 0.3s ease-in-out;
 }
 
 .tab-wrapper::-webkit-scrollbar
@@ -30,6 +31,7 @@ button:hover span
 a:hover
 {
     color: #e4572e !important;
+    transition: all 0.3s ease-in-out;
 }
 a{
   text-decoration: none;
@@ -90,6 +92,7 @@ a{
   .tab-btn:hover, .tab-btn:focus, .tab-btn:active
   {
     background-color: #131313 !important;
+    transition: all 0.3s ease-in-out;
     color: white !important;
     border: none !important;
 
@@ -117,5 +120,9 @@ h1
     span, body, h1
     {
         font-size: 16px !important;
+    }
+    .footerlink
+    {
+      text-align: center !important;
     }
 }

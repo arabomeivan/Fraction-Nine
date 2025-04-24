@@ -20,14 +20,14 @@
 
             <div class=" d-lg-flex gap-2 justify-content-center">
                 <div class="d-flex align-items-end justify-content-center mt-lg-0">
-                    <img src="/assets/images/gallery-1.png" class="img-fluid my-3 animate__animated animate__zoomIn" alt="">
+                    <img src="/assets/images/gallery-1.png" class="img-fluid preload-img my-3 animate__animated animate__zoomIn" alt="">
                 </div>
                 <div class="d-flex align-items-end justify-content-center">
-                    <img src="/assets/images/gallery-2.png" class="img-fluid mb-3 animate__animated animate__zoomIn" alt="">
+                    <img src="/assets/images/gallery-2.png" class="img-fluid preload-img mb-3 animate__animated animate__zoomIn" alt="">
                 </div>
                 
                 <div class="d-flex align-items-end justify-content-center">
-                    <img src="/assets/images/gallery-3.png" class="img-fluid mb-3 animate__animated animate__zoomIn" alt="">
+                    <img src="/assets/images/gallery-3.png" class="img-fluid preload-img mb-3 animate__animated animate__zoomIn" alt="">
                 </div>
                 
             </div>
@@ -55,7 +55,7 @@
           >
           <img 
           :src="image.link"
-          class="img-fluid about w-60"
+          class="img-fluid about w-60 preload-img"
          >
           </div>
         </div>
@@ -94,7 +94,7 @@
 </div>
 
 <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-end">
-    <img src="https://res.cloudinary.com/djtwgg6op/image/upload/v1745491704/pexels-anya-juarez-tenorio-227888521-31651281_1_e7vhqy.png" class="img-fluid" alt="">
+    <img src="https://res.cloudinary.com/djtwgg6op/image/upload/v1745491704/pexels-anya-juarez-tenorio-227888521-31651281_1_e7vhqy.png" class="img-fluid preload-img" alt="">
 </div>
    </div>
     </section>
