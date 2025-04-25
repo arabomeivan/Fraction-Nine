@@ -15,11 +15,15 @@ body
   min-width: 0;             
   line-height: 1;           
 }
+h1
+{
+  font-weight: bold;
+}
 
-button:hover span
+.btn:hover span
 {
    background-color: #e4572e !important ;
-   border: none !important;
+   border-color: transparent !important;
    color: white !important;
    transition: all 0.3s ease-in-out;
 }
@@ -43,7 +47,6 @@ a{
   .scroll-wrapper {
     overflow: hidden;
     width: 100%;
-    position: relative;
   }
   
   .scroll-track {
@@ -68,11 +71,29 @@ a{
     box-shadow: none !important;
 
   }
-  .accordion-button:focus, .accordion-button:not(.collapsed)
-  {
-    background-color: transparent!important;
-    color: #131313;
-  }
+  /* Hover, focus, or collapsed (closed) state */
+.accordion-button:hover,
+.accordion-button:focus,
+.accordion-button.collapsed {
+  background-color: #FEF8F7 !important;
+  color: #131313;
+}
+.accordion-button::after
+{
+  display: none !important;
+}
+.fs-7
+{
+   font-size: 18px;
+}
+/* When it's open (not collapsed) and NOT hovered or focused */
+.accordion-button:not(.collapsed):not(:hover):not(:focus) {
+  background-color: #fff !important; /* <-- change this to your default */
+  color: #000; /* optional */
+}
+
+
+  .ac
   .image {
     width: 100%;
     height: auto;
@@ -94,7 +115,7 @@ a{
     background-color: #131313 !important;
     transition: all 0.3s ease-in-out;
     color: white !important;
-    border: none !important;
+    border-color: transparent !important;
 
   }
 h1

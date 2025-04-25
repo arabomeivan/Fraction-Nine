@@ -8,23 +8,36 @@
     
           <h2 class="accordion-header">
             <button
-              class="accordion-button border-bottom border-light text-black gap-2 d-flex"
-              type="button"
-              data-bs-toggle="collapse"
-              :data-bs-target="`#${services.slug}`"
-              :aria-controls="services.slug"
-              :aria-expanded="false">
+            class="accordion-button border-bottom border-light text-black gap-3 d-flex align-items-center"
+            type="button"
+            data-bs-toggle="collapse"
+            :data-bs-target="`#${services.slug}`"
+            :aria-expanded="openItem === services.slug"
+            :aria-controls="services.slug"
+            @click="toggleItem(services.slug)">
     
+            
               <span
-                class="d-flex align-items-center fs-3 justify-content-center p-3 bg-black text-white rounded-circle"
+                class="d-flex align-items-center fs-2 justify-content-center p-3 bg-black text-white rounded-circle mr-2"
                 style="width: 58px; height:58px">
                 0{{ services.id }}
               </span>
+
+
     
-              <!-- keep your h1 tag if you really want it (HTML spec warns) -->
-              <h1 fs="fs-4">
-                {{ services.title }}
-              </h1>
+              <div class=" w-100 justify-content-between d-flex align-items-center">
+              
+                  <p class="fs-4 text-black mb-0">
+                    <b>{{ services.title }}</b>
+                  </p>
+                
+                
+              
+                <span class="ms-auto">
+                  <BootstrapIcon class="fs-4" :name="openItem === services.slug ? 'bi bi-arrow-down' : 'bi bi-arrow-right'"/>
+                </span>
+              </div>
+               
             </button>
           </h2>
     
@@ -46,6 +59,7 @@ export default {
     name: 'ServicesSection',
     data(){
       return{
+        openItem: null,
         servicesContent:[{
           id:1, content:'We plan, shoot, and polish images that tell your brand’s story—whether it’s lifestyle, product, or event coverage.', title:'PHOTOGRAPHY'
 
@@ -79,7 +93,12 @@ export default {
         slug: `collapse-${slugify(s.title)}`
       }));
     }
+  },
+  methods: {
+  toggleItem(slug) {
+    this.openItem = this.openItem === slug ? null : slug;
   }
+}
 }
 </script>
 <style lang="">

@@ -1,6 +1,6 @@
 <template>
     <div>
-        fhjf
+        Brands
     </div>
 </template>
 <script>

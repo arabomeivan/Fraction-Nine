@@ -51,12 +51,14 @@
             v-for="(image, index) in loopedImages"
             :key="index"
             class="image-container"
-            :class="{ active: isCentered(index) }"
           >
-          <img 
-          :src="image.link"
-          class="img-fluid about w-60 preload-img"
-         >
+          <div style="display: inline-block;">
+            <img 
+              :src="image.link"
+              class="img-fluid"
+              style="width:400px"
+            >
+          </div>
           </div>
         </div>
         
@@ -74,8 +76,10 @@
        <button v-for="componentbtn in portfolioComponents " :key="componentbtn.Id" class="btn tab-btn bg-white text-black border border-black rounded-5" @click="currentComponent = componentbtn.component">{{componentbtn.name}}</button>
         </div>
 
-        <div class="py-5">
+        <div class="py-5 portfolio">
+            <transition name="fade-zoom">
             <component :is="currentComponent"/>
+        </transition>
         </div>
     </section>
 
@@ -89,7 +93,7 @@
    </h1>
 
    <div class="row mt-3">
-<div class="col-lg-6">
+<div class="col-lg-6 pt-5">
 <ServicesSection/>
 </div>
 
@@ -101,7 +105,7 @@
 
     <section id="testimonials" class="py-5">
      <h1 class="fs-5 text-secondary">TESTIMONIALS</h1>
-     <h1 class="text-black">HEAR FROM OUR HAPPY CLIENTS</h1>
+     <h1 class="text-black">HEAR FROM OUR HAPPY <br>CLIENTS</h1>
 
      <div>
        <TestiMonials/>
@@ -138,9 +142,7 @@ export default {
             {
                 id:3, name: 'Landscapes', component: LandScapes
             },
-            {
-                id:4, name: 'Brands', component: Brands
-            }],
+            ],
 
             currentComponent: LifeStyle,
             images:[{
@@ -208,6 +210,18 @@ export default {
 }
 
 </script>
-<style lang="">
-    
+<style scoped>
+.portfolio {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; /* Smooth transition for both transform and opacity */
+  }
+  
+  .fade-zoom-enter-active,
+  .fade-zoom-leave-active {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  }
+  
+  .fade-zoom-enter, .fade-zoom-leave-to /* .fade-zoom-leave-active in <2.1.8 */ {
+    transform: scale(0.8); /* Zoom out initially */
+    opacity: 0; /* Fade out initially */
+  }
 </style>

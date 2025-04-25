@@ -1,12 +1,15 @@
 <template>
     <div class="py-5">
         <Carousel
+        ref="carousel"
+  :autoplay="true"
+  :interval="5000"
         >
             <CarouselInner>
              <CarouselItem>
                 <div class="d-flex justify-content-between">
                     <div class="w-50 px-2">
-                    <img src="https://res.cloudinary.com/djtwgg6op/image/upload/v1745505788/IMG_3108_vmgbv0.jpg" class="img-fluid w-50" alt="">
+                    <img src="https://res.cloudinary.com/djtwgg6op/image/upload/v1745572112/Frame_39_1_iazqsc.png" class="img-fluid" alt="">
                     </div>
     
                     <div class="content w-50">
@@ -19,10 +22,10 @@
                       </div>
     
                     <div class="d-flex gap-2 justify-content-end">
-                   <button type="button" class="rounded-circle align-items-center justify-content-cente number-badge btn text-black border border-black bg-transparent " data-bs-target="#carousel" data-bs-slide="prev">
+                   <button type="button" class="rounded-circle align-items-center justify-content-cente number-badge btn text-black border border-black bg-transparent " @click="handlePrev">
                    <BootstrapIcon name="bi bi-arrow-left"/>
                    </button>
-                   <button type="button" class=" d-flex align-items-center justify-content-center rounded-circle number-badge btn text-black border border-black bg-transparent" data-bs-target="#carousel" data-bs-slide="next">
+                   <button type="button" class=" d-flex align-items-center justify-content-center rounded-circle number-badge btn text-black border border-black bg-transparent" @click="handleNext">
                     <BootstrapIcon name="bi bi-arrow-right"/>
                    </button>
                     </div>
@@ -47,10 +50,10 @@
                       </div>
     
                     <div class="d-flex gap-2 justify-content-end">
-                   <button type="button" class="rounded-circle align-items-center justify-content-cente number-badge btn text-black border border-black bg-transparent " data-bs-target="#carousel" data-bs-slide="prev">
+                   <button type="button" class="rounded-circle align-items-center justify-content-cente number-badge btn text-black border border-black bg-transparent " @click="handlePrev">
                    <BootstrapIcon name="bi bi-arrow-left"/>
                    </button>
-                   <button type="button" class=" d-flex align-items-center justify-content-center rounded-circle number-badge btn text-black border border-black bg-transparent" data-bs-target="#carousel" data-bs-slide="next">
+                   <button type="button" class=" d-flex align-items-center justify-content-center rounded-circle number-badge btn text-black border border-black bg-transparent" @click="handleNext">
                     <BootstrapIcon name="bi bi-arrow-right"/>
                    </button>
                     </div>
@@ -75,10 +78,10 @@
                       </div>
     
                     <div class="d-flex gap-2 justify-content-end">
-                   <button type="button" class="rounded-circle align-items-center justify-content-cente number-badge btn text-black border border-black bg-transparent " data-bs-target="#carousel" data-bs-slide="prev">
+                   <button type="button" class="rounded-circle align-items-center justify-content-cente number-badge btn text-black border border-black bg-transparent " @click="handlePrev">
                    <BootstrapIcon name="bi bi-arrow-left"/>
                    </button>
-                   <button type="button" class=" d-flex align-items-center justify-content-center rounded-circle number-badge btn text-black border border-black bg-transparent" data-bs-target="#carousel" data-bs-slide="next">
+                   <button type="button" class=" d-flex align-items-center justify-content-center rounded-circle number-badge btn text-black border border-black bg-transparent" @click="handleNext">
                     <BootstrapIcon name="bi bi-arrow-right"/>
                    </button>
                     </div>
@@ -93,7 +96,23 @@
 </template>
 <script>
 export default {
-    name:'TestiMonials'
+    name:'TestiMonials',
+    methods: {
+    handleNext() {
+      const carousel = this.$refs.carousel;
+      if (carousel) {
+        carousel.autoplay = false;
+        carousel.next();
+      }
+    },
+    handlePrev() {
+      const carousel = this.$refs.carousel;
+      if (carousel) {
+        carousel.autoplay = false;
+        carousel.prev();
+      }
+    },
+  },
 }
 </script>
 <style lang="">

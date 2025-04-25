@@ -32,8 +32,8 @@
                 </div>
              
              </div>
-             <div class="col-lg-6 d-block d-lg-flex align-items-center gap-5 justify-content-lg-end">
-             <div>
+             <div id="links" class="col-lg-6 d-block d-lg-flex align-items-center justify-content-between">
+             <div class="ml-5">
               <h1 class="fs-5 text-white mb-2 text-center">Quick Links</h1>
 
               <ul class="list-unstyled">
@@ -45,7 +45,7 @@
             </ul>
              </div>
 
-             <div>
+             <div class="ml-5">
                 <h1 class="fs-5 text-white mb-2">Portfolio</h1>
                 <ul class="list-unstyled">
                     <li v-for="footerLinks in portfolioLinks" :key="footerLinks.id">
