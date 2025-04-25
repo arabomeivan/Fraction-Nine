@@ -71,11 +71,8 @@ a{
     box-shadow: none !important;
 
   }
-  /* Hover, focus, or collapsed (closed) state */
-.accordion-button:hover,
-.accordion-button:focus,
-.accordion-button.collapsed {
-  background-color: #FEF8F7 !important;
+.accordion-button.collapsed, .accordion-button:not(.collapsed):not(:hover):not(:focus) {
+  background-color: transparent !important;
   color: #131313;
 }
 .accordion-button::after
@@ -86,10 +83,10 @@ a{
 {
    font-size: 18px;
 }
-/* When it's open (not collapsed) and NOT hovered or focused */
-.accordion-button:not(.collapsed):not(:hover):not(:focus) {
-  background-color: #fff !important; /* <-- change this to your default */
-  color: #000; /* optional */
+.accordion-button:hover,
+.accordion-button:focus {
+  background-color: #FEF8F7 !important;
+  color: #000;
 }
 
 
