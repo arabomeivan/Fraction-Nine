@@ -69,17 +69,18 @@ export default {
 
         },
         {
-          id:3, content:'Where raw footage becomes a compelling narrative. We shape your clips into complete visual experiences — polished cuts, motion graphics, sound design, colour grading, and pacing that brings your story to life.', title:'PHOTO EDITING'
+          id:3, content:'Dynamic, sharp, and purpose-driven video content. Ideal for events, social content, or business storytelling — we deliver clean, engaging footage that reflects your story and your audience.', title:'VIDEOGRAPHY'
 
         },
         {
-          id:4, content:'Perfecting every pixel. Your raw images deserve finishing touches that elevate them. We handle colour grading, retouching, skin cleanup, lighting balance, and artistic enhancement.', title:'VIDEO EDITING'
+          id:4, content:'Where raw footage becomes a compelling narrative. We shape your clips into complete visual experiences — polished cuts, motion graphics, sound design, colour grading, and pacing that brings your story to life.', title:'PHOTO EDITING'
 
         },
         {
-          id:4, content:'Dynamic, sharp, and purpose-driven video content. Ideal for events, social content, or business storytelling — we deliver clean, engaging footage that reflects your story and your audience.', title:'VIDEOGRAPHY'
+          id:5, content:'Perfecting every pixel. Your raw images deserve finishing touches that elevate them. We handle colour grading, retouching, skin cleanup, lighting balance, and artistic enhancement.', title:'VIDEO EDITING'
 
-        }
+        },
+        
       ]
       }
     },
