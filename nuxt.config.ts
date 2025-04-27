@@ -70,11 +70,18 @@ export default defineNuxtConfig({
           },
         ],
         titleTemplate: 'Fraction Nine',  // %s will be replaced by the page title
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { id: 'description', name: 'description', content: 'Fraction Nine' }
-      ]
+        meta: [
+          { charset: 'utf-8' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+          { name: 'description', content: 'Explore Fraction Nine\'s photography, cinematography, and editing services. We craft memories, frame stories, and bring visions to life through timeless storytelling.' },
+          { name: 'keywords', content: 'photography services, cinematography, videography, photo editing, video editing, creative storytelling, Fraction Nine' },
+          { name: 'author', content: 'Fraction Nine' },
+          { property: 'og:title', content: 'Fraction Nine | Visual Storytelling Services' },
+          { property: 'og:description', content: 'From photography to cinematic filmmaking, Fraction Nine captures life\'s most raw and beautiful moments.' },
+          { property: 'og:type', content: 'website' },
+          { property: 'og:url', content: 'https://fractionnine.com/' },
+          { property: 'og:image', content: 'https://res.cloudinary.com/djtwgg6op/image/upload/v1745772408/splashscreen_tjiqty.png' }
+        ]
       }
       },
 })
