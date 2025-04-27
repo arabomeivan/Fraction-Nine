@@ -61,19 +61,23 @@ export default {
       return{
         openItem: null,
         servicesContent:[{
-          id:1, content:'We plan, shoot, and polish images that tell your brand’s story—whether it’s lifestyle, product, or event coverage.', title:'PHOTOGRAPHY'
+          id:1, content:'For when every frame deserves to feel intentional. We specialize in lifestyle, portraits, weddings, editorial, and branded shoots. With a focus on authenticity and mood, we turn fleeting moments into frame-worthy memories.', title:'PHOTOGRAPHY'
 
         },
         {
-          id:2, content:'From storyboard to final export, we craft narrative‑driven video: promos, interviews, social loops, and docu‑shorts.', title:'VIDEOGRAPHY'
+          id:2, content:'Visual storytelling that feels like cinema.From short films to brand stories, music videos, and event reels — we craft cinematic experiences that stir emotion and command attention.', title:'CINEMATOGRAPHY'
 
         },
         {
-          id:3, content:'From gentle retouch to surreal composites, we refine images so they publish‑ready—print or digital.', title:'PHOTO EDITING'
+          id:3, content:'Where raw footage becomes a compelling narrative. We shape your clips into complete visual experiences — polished cuts, motion graphics, sound design, colour grading, and pacing that brings your story to life.', title:'PHOTO EDITING'
 
         },
         {
-          id:4, content:'We turn hours of clips into a cohesive narrative: pacing, color, graphics, and delivery across every platform.', title:'VIDEO EDITING'
+          id:4, content:'Perfecting every pixel. Your raw images deserve finishing touches that elevate them. We handle colour grading, retouching, skin cleanup, lighting balance, and artistic enhancement.', title:'VIDEO EDITING'
+
+        },
+        {
+          id:4, content:'Dynamic, sharp, and purpose-driven video content. Ideal for events, social content, or business storytelling — we deliver clean, engaging footage that reflects your story and your audience.', title:'VIDEOGRAPHY'
 
         }
       ]

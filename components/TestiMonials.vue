@@ -2,7 +2,7 @@
     <div class="py-5">
         <Carousel
         ref="carousel"
-  :autoplay="true"
+  :autoplay="false"
   :interval="5000"
         >
             <CarouselInner>

@@ -1,20 +1,26 @@
 <template>
     <div class="py-5">
         <section id="heroo-section" class="py-lg-5 py-3">
-            <h1 class="mb-3"><b>Hello, I'M A <br><span style="font-size:79px;">PROFESSIONAL PHOTOGRAPHER</span></b></h1>
+            <h1 class="mb-3"><b>Hello, I'M A <br><span style="font-size:79px;">A VISUAL STORYTELLER
+            </span></b></h1>
 
             <p>
-                I capture life’s most meaningful moments — from intimate weddings to bold fashion shoots. Let’s tell your story through powerful imagery.
+                I capture life’s most powerful moments  from intimate weddings to bold fashion shoots and cinematic films. <br>Through photography and cinematography, I turn real moments into timeless visuals that speak beyond words.
             </p>
 
             <div class="d-flex justify-content-lg-start justify-content-center mt-5">
-                <button class=" p-0 bg-transparent border-0">
-                   <span class="btn bg-black  rounded-5 text-white">
-                    Book a call
-                   </span>
-                    <span class="btn bg-black rounded-circle text-white">
-                      <BootstrapIcon name="bi bi-arrow-up-right"/></span>
-                </button>
+
+                <b-button
+  toggle="modal"
+  target="#exampleModalCenteredScrollable"
+  class="p-0 bg-transparent border-0"
+ >
+ <span class="btn bg-black  rounded-5 text-white">
+    Get in touch
+   </span>
+    <span class="btn bg-black rounded-circle text-white">
+      <BootstrapIcon name="bi bi-arrow-up-right"/></span>
+ </b-button>
                
             </div>
 
@@ -35,13 +41,14 @@
 
         <section id="about" class="py-5">
        <h1 class="fs-5 mb-3 text-secondary">About Us</h1>
-       <div class="d-lg-flex justify-content-between">
-       <div>
-        <h1>I CAPTURE JOY, CRAFT MEMORIES, AND TELL STORIES WITH EVERY CLICK</h1>
+       <div class="row justify-content-between mb-5">
+       <div class="col-lg-6">
+        <h1>I CRAFT MEMORIES, FRAME STORIES, AND BRING VISIONS TO LIFE
+        </h1>
        </div>
 
-       <div>
-        <p>a photographer with a passion for capturing life in all its beautiful forms. Photography, for me, is more than just pictures. It’s about connection — with people, with places, with moments that matter. I aim to create images that not only look good, but feel real — joyful, honest, and full of life.</p>
+       <div class="col-lg-6">
+        <p class="text-justify">I’m a passionate creative dedicated to capturing life in all its beautiful forms — not just through stills, but also through cinematic motion. Photography and filmmaking aren’t just services to me. They’re how I connect with people, places, and the raw moments that truly matter. Whether it’s a smile, a mood, or an entire experience, I aim to preserve it in a way that feels honest, emotional, and unforgettable.</p>
        </div>
        </div>
 
@@ -85,12 +92,15 @@
 
     <section id="services" class="py-5">
    <h1 class="fs-5 mb-4 text-secondary">
-  OUR SERVICES
+    What We Offer
    </h1>
 
-   <h1 class="text-black">
-    I BLEND EMOTION AND ARTISTRY TO TURN YOUR MOMENTS INTO MAGIC
+   <h1 class="text-black mb-3">
+    SERVICES THAT TRANSFORM YOUR VISION INTO VISUAL MASTERPIECES
    </h1>
+
+   <p>From idea to final image or frame, we offer end-to-end visual services tailored to brands, <br>creatives, and individuals who value timeless storytelling. Whether you're seeking stills or cinematic visuals, we’ve got you covered.
+</p>
 
    <div class="row mt-3">
 <div class="col-lg-6 pt-5">
@@ -115,7 +125,7 @@
 </div>
 </template>
 <script>
-import Brands from '~/components/portfolio/Brands.vue';
+// import Brands from '~/components/portfolio/Brands.vue';
 import LandScapes from '~/components/portfolio/LandScapes.vue'
 import LifeStyle from '~/components/portfolio/LifeStyle.vue'
 import Portraits from '~/components/portfolio/Portraits.vue'
