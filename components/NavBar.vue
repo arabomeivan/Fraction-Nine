@@ -15,7 +15,7 @@
                     <NuxtLink to="#about" class="nav-link">About</NuxtLink>
                   </li>
                   <li class="nav-item">
-                    <NuxtLink to="#service" class="nav-link">Service</NuxtLink>
+                    <NuxtLink to="#services" class="nav-link">Service</NuxtLink>
                   </li>
                 </ul>
                 <div class="d-flex justify-content-center">
