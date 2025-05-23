@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     'usebootstrap',
     'nuxt-bootstrap-icons',
+    '@vee-validate/nuxt',
     '@pinia/nuxt'],
     
     bootstrapIcons: {

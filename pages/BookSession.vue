@@ -24,55 +24,84 @@
 
                 <p class="fs-7 test-secondary">Tell us about your vision, and we'll handle the rest. Fill out the <br>form below to get started</p>
 
-                <form @submit.prevent="">
+                <Form :validation-schema="schema" @submit.prevent="onSubmit">
                     <div class="mb-3">
-                        <label for="name" class="form-label text-secondary">Name</label>
-                        <input id="name" v-model="name" type="text" class="form-control">
+                      <label for="name" class="form-label text-secondary"><b>Name</b></label>
+                      <Field id="name" name="name" as="input" class="form-control" />
+                      <ErrorMessage name="name" class="text-danger" />
+                    </div>
+                
+                    <div class="mb-3">
+                      <label for="email" class="form-label text-secondary"><b>Email Address</b></label>
+                      <Field id="email" name="email" type="email" as="input" class="form-control" />
+                      <ErrorMessage name="email" class="text-danger" />
+                    </div>
+                
+                    <div class="mb-3">
+                      <label for="phone" class="form-label text-secondary"> <b>Phone Number</b> </label>
+                      <Field id="phone" name="phone" as="input" class="form-control" />
+                      <ErrorMessage name="phone" class="text-danger" />
+                    </div>
+                
+                    <div class="mb-3">
+                      <label for="servicetype" class="form-label text-secondary"><b>Service Type</b></label>
+                      <Field id="servicetype" name="selectedServiceType" as="select" class="form-control text-secondary">
+                        <option disabled value="">Please select a service</option>
+                        <option value="general">Lifestyle</option>
+                        <option value="dental">Portraits</option>
+                        <option value="eye">Wedding</option>
+                        <option value="pediatrics">Landscapes</option>
+                      </Field>
+                      <ErrorMessage name="selectedServiceType" class="text-danger" />
+                    </div>
+                
+                    <div class="d-flex justify-content-between mb-3">
+                      <div>
+                        <label for="date" class="form-label text-secondary"><b>Date</b></label>
+                        <span>
+                            <Field id="date" name="date" type="date" as="input" class="form-control" />
+                            <BootstrapIcon class="text-secondary" name="bi bi-calendar"/>
+                        </span>
+                        <ErrorMessage name="date" class="text-danger" />
                       </div>
-                      <div class="mb-3">
-                        <label for="email" class="form-label text-secondary">Email Address</label>
-                        <input id="email" v-model="email" type="email" class="form-control">
+                
+                      <div>
+                        <label for="time" class="form-label text-secondary"><b>Time</b></label>
+                        <span>
+                            <Field id="time" name="time" type="time" as="input" class="form-control" /> <BootstrapIcon class="text-secondary" name="bi bi-clock"/>
+                        </span>
+                        <ErrorMessage name="time" class="text-danger" />
                       </div>
-                      <div class="mb-3">
-                        <label for="phone" class="form-label text-secondary">Phone Number</label>
-                        <input id="phone" type="text" class="form-control">
-                      </div>
-                      
-                      <div class="mb-3">
-                        <label for="servicetype" class="form-label text-secondary">Service Type</label>
-                        <select id="servicetype" v-model="selectedServiceType" class="form-control text-secondary">
-                            <option disabled value="">Please select a service</option>
-                            <option value="general">Lifestyle</option>
-                            <option value="dental">Portraits</option>
-                            <option value="eye">Wedding</option>
-                            <option value="pediatrics">Landscapes</option>
-                          </select>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-3">
-                        <div>
-                            <label for="date" class="form-label text-secondary">Date</label>
-                            <input id="date" v-model="date" type="date" class="form-control">
-                          </div>
-
-                          <div>
-                            <label for="time" class="form-label text-secondary">Time</label>
-                            <input id="time" v-model="time" type="datetime" class="form-control">
-                          </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="description" class="form-label text-secondary">Description</label>
-                        <textarea id="description" v-model="description" class="form-control" rows="3"/>
-                      </div>
-                      
-                </form>
+                    </div>
+                
+                    <div class="mb-3">
+                      <label for="description" class="form-label text-secondary">Description</label>
+                      <Field id="description" name="description" as="textarea" class="form-control" rows="3" />
+                      <ErrorMessage name="description" class="text-danger" />
+                    </div>
+                
+                    <div class="form-check mb-3">
+                      <Field name="terms" type="checkbox" as="input" class="form-check-input" />
+                      <b-button
+                      toggle="modal"
+                      target="#termsconditions"
+                      class="p-0 bg-transparent border-0"
+                     >
+                        I accept the terms and conditions
+                       
+                         
+                     </b-button>
+                      <ErrorMessage name="terms" class="text-danger" />
+                    </div>
+                   
+                  </Form>
 
             </div>
 
             <div class="w-50 bg-light p-5 rounded-2">
                 <h1 class="mb-4">BOOKING SUMMARY</h1>
 
-                <form @submit.prevent="">
+                <div>
                     <p class="mb-1 fs-7">Name</p>
                     <p class="text-secondary fs-7 mb-2">{{name}}</p>
                     <p class="mb-1 fs-7">Email</p>
@@ -108,15 +137,26 @@
                             
                         
                     
-                </form>
+                </div>
                 
             </div>
         </div>
+
+        <TermsConditions/>
     </div>
 </template>
 <script>
+import { Form, Field, ErrorMessage } from 'vee-validate'
+import TermsConditions from '../components/TermsConditions.vue'
+import * as yup from 'yup'
 export default {
     name:'BookSession',
+    components: {
+    Form,
+    Field,
+    ErrorMessage,
+    TermsConditions
+  },
   beforeRouteEnter(to, from, next) {
     next(vm => {
       // `vm` is the component instance
@@ -124,19 +164,28 @@ export default {
     })
   },
 
-    data() {
+  data() {
     return {
-      previousRoute: '',
-      name:'',
-      email:'',
-      phone:'',
-      selectedServiceType:'',
-      date:'',
-      time:'',
-      description:''
+      schema: yup.object({
+        name: yup.string().required('Name is required'),
+        email: yup.string().email('Enter a valid email').required('Email is required'),
+        phone: yup.string().required('Phone number is required'),
+        selectedServiceType: yup.string().required('Please select a service'),
+        date: yup.string().required('Date is required'),
+        time: yup.string().required('Time is required'),
+        description: yup.string().required('Description is required'),
+        terms: yup.bool().oneOf([true], 'You must accept the terms'),
+      }),
     }
-  },
   
+  },
+  methods: {
+    onSubmit(values) {
+      console.log('Form submitted with:', values)
+      // You now have all form values like:
+      // values.name, values.email, values.phone, etc.
+    },
+  },
 
 }
 </script>
