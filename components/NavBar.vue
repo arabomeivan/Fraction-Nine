@@ -19,14 +19,14 @@
                   </li>
                 </ul>
                 <div class="d-flex justify-content-center">
-                  <a href="tel:+447388467919" class="btn bg-transparent border-0 text-black p-0">
+                  <NuxtLink to="/booksession" class="btn bg-transparent border-0 text-black p-0">
                     <span class="btn bg-transparent rounded-5 border-black border">
-                      Book a call
+                      Book a Session
                     </span>
                     <span class="btn border-black border rounded-circle text-black">
                       <BootstrapIcon name="bi bi-arrow-up-right"/>
                     </span>
-                  </a>
+                  </NuxtLink>
                 </div>
                 
               </div>

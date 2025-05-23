@@ -80,7 +80,7 @@
         </h1>
 
         <div class="d-flex gap-2 justify-content-start overflow-x-auto flex-shrink-0 tab-wrapper">
-       <button v-for="componentbtn in portfolioComponents " :key="componentbtn.Id" class="btn tab-btn bg-white text-black border border-black rounded-5" @click="currentComponent = componentbtn.component">{{componentbtn.name}}</button>
+       <button type="button" v-for="componentbtn in portfolioComponents " :key="componentbtn.Id" class="btn tab-btn bg-white text-black border border-black rounded-5" @click="currentComponent = componentbtn.component">{{componentbtn.name}}</button>
         </div>
 
         <div class="py-5 portfolio">

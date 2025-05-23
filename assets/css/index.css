@@ -19,13 +19,26 @@ h1
 {
   font-weight: bold;
 }
-
+.submit-btn
+{
+   color: white;
+  background-color: #131313;
+}
+.form-control:focus
+{
+   box-shadow: none !important;
+}
 .btn:hover span
 {
    background-color: #e4572e !important ;
    border-color: transparent !important;
    color: white !important;
    transition: all 0.3s ease-in-out;
+}
+.no-hover:hover
+{
+  color: white !important;
+  background-color: #131313 !important;
 }
 
 .tab-wrapper::-webkit-scrollbar
